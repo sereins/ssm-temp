@@ -11,11 +11,11 @@
     <context:property-placeholder location="classpath:database.properties"/>
 
     <!--配置druid连接池-->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init">
-        <property name="driverClassName" value="${mysql.driver}"/>
-        <property name="url" value="${mysql.url}"/>
-        <property name="username" value="${mysql.username}"/>
-        <property name="password" value="${mysql.password}"/>
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
